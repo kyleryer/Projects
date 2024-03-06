@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Post
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        body {
+        background-image: url('/static/homebackground.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form action="/createdpost" method="post" style="margin-left: auto; margin-right: auto; width: 75%">
+        <div class="form-group" style="width: 50%">
+            <label class="postlabel" for="description">Description</label>
+            <textarea autocomplete="off" class="form-control" id="description" name="description" placeholder="What are you looking for?" type="text" rows="3"></textarea>
+        </div>
+        <br>
+        <div class="form-group" style="width: 50%">
+            <label class="postlabel" for="players">Number of players needed</label>
+            <input type="number" step="1" class="form-control" id="players" name="players" placeholder="How many players are you looking for?">
+        </div>
+        <br>
+        <div class="form-group" style="width: 50%">
+            <label class="postlabel" for="rank">Would you like to display your rank?</label>
+            <select class="form-control" id="rank" name="rank" placeholder="Display rank?">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <button type="submit" value="{{ game }}" name="boardpost" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 20%; background-color: RebeccaPurple; color: #ddcfcf">Post To Board</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete Team
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        body {
+        background-image: url('/static/homebackground.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <p class="lead errorcodetext">Are you sure you want to delete your team?</p>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form action="/deleteteam" method="post" style="text-align: center">
+        <button type="submit" value="{{ teamname }}" name="yes" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 20%; background-color: DarkRed; color: #ddcfcf">Yes, Delete Team</button>
+        <button type="submit" value="{{ teamname }}" name="no" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 20%; background-color: RebeccaPurple; color: #ddcfcf">No, Go Back</button>
+    </form>
+
+{% endblock %}

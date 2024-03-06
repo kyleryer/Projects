@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Send Message
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        body {
+        background-image: url('/static/homebackground.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form action="/sendmessage" method="post" style="margin-left: auto; margin-right: auto; width: 75%">
+        <div class="form-group" style="width: 50%">
+            <label class="postlabel" for="receiver">Send to:</label>
+            {% if receiver != None %}
+                <input autocomplete="off" class="form-control" id="receiver" name="receiver" value="{{ receiving }}" type="text">
+            {% else %}
+                <input autocomplete="off" class="form-control" id="receiver" name="receiver" placeholder="Type user's username here" type="text">
+            {% endif %}
+        </div>
+        <br>
+        <div class="form-group" style="width: 50%">
+            <label class="postlabel" for="message">Message</label>
+            <textarea autocomplete="off" class="form-control" id="message" name="message" placeholder="Type your message here" type="text" rows="3"></textarea>
+        </div>
+        <br>
+        <br>
+        <button type="submit" name="messagesent" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 20%; background-color: RebeccaPurple; color: #ddcfcf">Send Message</button>
+    </form>
+
+{% endblock %}

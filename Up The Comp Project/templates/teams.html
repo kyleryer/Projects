@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Teams
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        body {
+        background-image: url('/static/homebackground.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div style="text-align: center">
+        <p class="lead" style="font-size: 40px; font-weight: bold; color: AquaMarine">Competitive Teams</p>
+        <form action="/createteam" method="get">
+            <button type="submit" name="createteam" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 20%; background-color: RebeccaPurple; color: #ddcfcf">Create A Team</button>
+        </form>
+    </div>
+
+    <br>
+    <br>
+
+    <table class="table table-striped table-bordered table-hover table-dark" style="margin-left: auto; margin-right: auto; width: 90%; color: Aquamarine">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Team Name</th>
+                <th scope="col">Team Description</th>
+                <th scope="col">Owner</th>
+                <th scope="col">Members</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the teams in database to display them in this table -->
+            {% for team in teams %}
+                <tr>
+                    <th scope="row">{{ loop.index }}</th>
+                    <td>{{ team.name }}</td>
+                    <td>{{ team.description }}</td>
+                    <td>{{ team.owner }}</td>
+                    <td>
+                    {% for member in members %}
+                        {% if member.team_name == team.name %}
+                        <div>{{ member.member }}</div>
+                        {% endif %}
+                    {% endfor %}
+                    </td>
+                    {% if team.owner == username %}
+                        <td>
+                            <form action="/invitemembers" method="get">
+                                <button type="submit" value="{{ team.name }}" name="inviteuser" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 15px; background-color: RebeccaPurple; color: Snow">Invite Users</button>
+                            </form>
+                            <form action="/removemembers" method="get">
+                                <button type="submit" value="{{ team.name }}" name="removeuser" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 15px; background-color: RebeccaPurple; color: Snow">Remove Members</button>
+                            </form>
+                            <form action="/deleteteam" method="get">
+                                <button type="submit" value="{{ team.name }}" name="deleteteam" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 15px; background-color: DarkRed; color: Snow">Delete Team</button>
+                            </form>
+                        </td>
+                    {% else %}
+                        <td>
+                            <form action="/sendmessage" method="post">
+                                <button type="submit" value="{{ team.owner }}" name="messageuser" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 15px; background-color: RebeccaPurple; color: Snow">Message Owner</button>
+                            </form>
+                            <form action="/profile" method="post">
+                                <button type="submit" value="{{ team.owner }}" name="profileuser" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 15px; background-color: RebeccaPurple; color: Snow">View Owner Profile</button>
+                            </form>
+                        </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

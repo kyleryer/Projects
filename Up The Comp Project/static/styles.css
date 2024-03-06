@@ -1,0 +1,76 @@
+.flexwelcome {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.leadparagraph {
+    text-align: center;
+    width: 25%;
+    font-weight: 350;
+}
+
+.red {
+    color: red;
+}
+
+.flexwelcomebutton {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
+
+.flexhome {
+    display: flex;
+    justify-content: left;
+    justify-content: space-between;
+}
+
+.translucent {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.flexgames {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: 100px;
+}
+
+.gameimg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 350px;
+    padding: 50px;
+}
+
+.postlabel {
+    color: Aquamarine;
+    font-size: 30px;
+    font-weight: semi-bold;
+}
+
+.errorcodetext {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.settingsbutton {
+    white-space: nowrap;
+    display: inline-block;
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.flexcenter {
+    display: flex;
+    justify-content: center;
+}

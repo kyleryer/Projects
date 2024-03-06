@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change Account Info
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        body {
+        background-image: url('/static/homebackground.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <p class="lead errorcodetext">Change Account Information</p>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="pb-5">
+        <form action="/changesettings" method="post" style="margin-left: auto; margin-right: auto; width: 75%">
+            <div class="form-group" style="width: 50%">
+                <label class="postlabel" for="name">Name</label>
+                <input autocomplete="off" class="form-control" id="name" name="name" placeholder="Name" type="text">
+            </div>
+            <br>
+            <div class="form-group" style="width: 50%">
+                <label class="postlabel" for="bio">Bio</label>
+                <textarea autocomplete="off" class="form-control" id="bio" name="bio" placeholder="What's your story?" type="text" rows="3"></textarea>
+            </div>
+            <br>
+            <div class="form-group" style="width: 50%">
+                <label class="postlabel" for="achievements">Achievements</label>
+                <textarea autocomplete="off" class="form-control" id="achievements" name="achievements" placeholder="What have you accomplished?" type="text" rows="3"></textarea>
+            </div>
+            <br>
+            <div class="form-group" style="width: 50%">
+                <label class="postlabel" for="setup">Setup</label>
+                <textarea autocomplete="off" class="form-control" id="setup" name="setup" placeholder="What's your gaming setup like?" type="text" rows="3"></textarea>
+            </div>
+            <br>
+            <div class="form-row align-items-center" id="addgame">
+                <div class="col-auto my-1">
+                    <label class="postlabel" for="gameselect">Select your game</label>
+                    <select class="custom-select mr-sm-2" id="gameselect" name="gameselect">
+                        <option selected>Choose...</option>
+                        <option value="League_of_Legends">League of Legends</option>
+                        <option value="Counter_Strike_2">Counter Strike 2</option>
+                        <option value="Fortnite">Fortnite</option>
+                        <option value="Valorant">Valorant</option>
+                        <option value="Rocket_League">Rocket League</option>
+                        <option value="Dota_2">Dota 2</option>
+                        <option value="World_of_Warcraft">World of Warcraft</option>
+                        <option value="Apex_Legends">Apex Legends</option>
+                        <option value="Warzone_2">Warzone 2</option>
+                        <option value="Call_of_Duty">Call of Duty</option>
+                        <option value="Starcraft_2">Starcraft 2</option>
+                        <option value="Rainbow_6_Siege">Rainbow 6 Siege</option>
+                        <option value="Overwatch_2">Overwatch 2</option>
+                        <option value="Smite">Smite</option>
+                        <option value="Halo_Infinite">Halo Infinite</option>
+                        <option value="Other_Games">Other Game</option>
+                    </select>
+                </div>
+                <div class="col-sm-3 my-1">
+                    <label class="postlabel" for="rank">Rank</label>
+                    <input autocomplete="off" class="form-control" id="rank" name="rank" placeholder="Rank (if other game is selected, please specify game)" type="text">
+                </div>
+            </div>
+            <br>
+            <br>
+            <button type="submit" name="submit" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 20%; background-color: RebeccaPurple; color: #ddcfcf">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}

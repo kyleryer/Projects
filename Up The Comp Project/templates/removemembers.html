@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Remove Members
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        body {
+        background-image: url('/static/homebackground.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div>
+        <p class="lead errorcodetext">Remove Team Member</p>
+    </div>
+
+    <br>
+    <br>
+
+    <form action="/removemembers" method="post" style="margin-left: auto; margin-right: auto; width: 75%">
+        <div class="form-row align-items-center" id="selectmember">
+            <div class="col-auto my-1">
+                <label class="postlabel" for="memberselect">Select member to remove:</label>
+                <select class="custom-select mr-sm-2" id="memberselect" name="memberselect">
+                    <option selected>Choose...</option>
+                    {% for member in members %}
+                    <option value="{{ member.member }}">{{ member.member }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <br>
+            <br>
+            <br>
+            <button type="submit" value="{{ teamname }}" name="removeteammember" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 20%; background-color: DarkRed; color: #ddcfcf">Remove User</button>
+        </div>
+    </form>
+
+{% endblock %}

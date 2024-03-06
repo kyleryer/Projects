@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        body {
+        background-image: url('/static/homebackground.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="flexhome" style="width: 37%">
+        <p class="lead" style="font-size: 40px; color: MintCream">Add games you're interested in.</p>
+        <button type="button" href="/games" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: #ddcfcf">
+            <a href="/games" style="text-decoration: none; color: Snow">Add games</a>
+        </button>
+    </div>
+
+    <div class="flexgames">
+        {% for game in games %}
+            <div style="text-align: center">
+                <img class="gameimg" alt="{{ game.game }}" src="/static/gamepictures/{{ game.game }}.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">{{ game.game|replace("_"," ") }}</h2>
+                <br>
+                <div>
+                    <form action="/boards" method="post">
+                        <button type="submit" value="{{ game.game }}" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">View Board</button>
+                    </form>
+                    <form action="/" method="post">
+                        <button type="submit" value="{{ game.game }}" name="remove" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: DarkRed; color: Snow">Remove</button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

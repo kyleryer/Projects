@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        body {
+        background-image: url('/static/homebackground.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="flexgames">
+        {% for search in searches %}
+            {% if loop.length > 0 %}
+                <div style="text-align: center">
+                    <img class="gameimg" alt="{{ search.games }}" src="/static/gamepictures/{{ search.games }}.jpg">
+                    <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">{{ search.games|replace("_"," ") }}</h2>
+                    <br>
+                    <div>
+                        <form action="/boards" method="post">
+                            <button type="submit" value="{{ search.games }}" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">View Board</button>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        {% if searches|length == 0 %}
+            <div style="text-align: center">
+                <img class="gameimg" alt="Other Games" src="/static/gamepictures/Other_Games.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Other Games</h2>
+                <br>
+                <div>
+                    <form action="/boards" method="post">
+                        <button type="submit" value="Other_Games" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">View Board</button>
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+{% endblock %}

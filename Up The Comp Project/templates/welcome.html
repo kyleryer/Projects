@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- http://getbootstrap.com/docs/5.1/ -->
+        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+        <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+
+        <!-- favicon.io icon -->
+        <link rel="icon" href="/static/favicon.ico">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <style>
+            body {
+              background-image: url('/static/background.jpg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+            }
+        </style>
+
+        <title>UpTheComp: Welcome</title>
+
+    </head>
+
+    <body>
+
+        <h1 class="display-1" style="text-align: center; font-size: 100px;">UP THE COMP</h1>
+
+        <br>
+
+        <div class="flexwelcome">
+            <p class="lead leadparagraph" style="font-size: 25px">
+                Team up with others at your <em class="red">competitive level</em> and <em class="red">rank up together</em>.
+            </p>
+            <p class="lead leadparagraph" style="font-size: 25px">
+               Create your own <em class="red">competitive team</em> to <em class="red">compete in your favorite games</em>.
+            </p>
+            <p class="lead leadparagraph" style="font-size: 25px">
+                Join another team <em class="red">competing in your game of choice</em>.
+             </p>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="flexwelcomebutton">
+            <form action="/login" method="get">
+                <button type="submit" class="btn btn-primary btn-lg lead" style="font-family: sans-serif; font-weight: bold; font-size: 35px; height: 100px; width: 200px; background-color: #1d1717; color: #ddcfcf">Login</button>
+            </form>
+            <p class="lead leadparagraph red" style="font-size: 60px; font-weight: bold"><em>OR</em></p>
+            <form action="/register" method="get">
+                <button type="submit" class="btn btn-primary btn-lg" style="font-family: sans-serif; font-weight: bold; font-size: 35px; height: 100px; width: 200px; background-color: #1d1717; color: #ddcfcf">Register</button>
+            </form>
+        </div>
+
+    </body>
+
+</html>
+

@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+    <style>
+        body {
+        background-image: url('/static/homebackground.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+
+    <div class="flexgames">
+        <div style="display: flex; justify-content: center">
+            <div style="text-align: center">
+                <img class="gameimg" alt="League of Legends" src="/static/gamepictures/League_of_Legends.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">League of Legends</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="League_of_Legends" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="Counter Strike 2" src="/static/gamepictures/Counter_Strike_2.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Counter Strike 2</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Counter_Strike_2" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="Fortnite" src="/static/gamepictures/Fortnite.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Fortnite</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Fortnite" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="Valorant" src="/static/gamepictures/Valorant.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Valorant</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Valorant" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div style="display: flex; justify-content: center">
+            <div style="text-align: center">
+                <img class="gameimg" alt="Rocket League" src="/static/gamepictures/Rocket_League.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Rocket League</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Rocket_League" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="Dota 2" src="/static/gamepictures/Dota_2.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Dota 2</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Dota_2" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="World Of Warcraft" src="/static/gamepictures/World_of_Warcraft.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">World of Warcraft</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="World_of_Warcraft" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="Apex Legends" src="/static/gamepictures/Apex_Legends.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Apex Legends</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Apex_Legends" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div style="display: flex; justify-content: center">
+            <div style="text-align: center">
+                <img class="gameimg" alt="Warzone 2" src="/static/gamepictures/Warzone_2.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Warzone 2</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Warzone_2" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="Call Of Duty" src="/static/gamepictures/Call_of_Duty.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Call of Duty</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Call_of_Duty" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="Starcraft 2" src="/static/gamepictures/Starcraft_2.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Starcraft 2</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Starcraft_2" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="Rainbow 6 Siege" src="/static/gamepictures/Rainbow_6_Siege.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Rainbow 6 Seige</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Rainbow_6_Siege" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div style="display: flex; justify-content: center">
+            <div style="text-align: center">
+                <img class="gameimg" alt="Overwatch 2" src="/static/gamepictures/Overwatch_2.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Overwatch 2</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Overwatch_2" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="Smite" src="/static/gamepictures/Smite.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Smite</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Smite" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="Halo Infinite" src="/static/gamepictures/Halo_Infinite.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Halo Infinite</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Halo_Infinite" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <img class="gameimg" alt="Other Games" src="/static/gamepictures/Other_Games.jpg">
+                <h2 class="lead" style="font-size: 25px; font-weight: 400; color: Snow">Other Games</h2>
+                <br>
+                <form action="/games" method="post">
+                    <button type="submit" value="Other_Games" name="game" class="btn btn-secondary btn-lg" style="font-family: sans-serif; font-size: 20px; width: 150px; background-color: RebeccaPurple; color: Snow">Add</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

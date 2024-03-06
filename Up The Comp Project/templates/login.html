@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <style>
+        body {
+        background-image: url('/static/background.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="text-center py-5">
+        <form action="/login" method="post">
+            <div class="mb-4" style="display: flex; justify-content: center">
+                <input autocomplete="off" autofocus class="form-control form-control-lg w-auto" id="username" name="username" placeholder="Username" type="text">
+            </div>
+            <div class="mb-3" style="display: flex; justify-content: center">
+                <input class="form-control form-control-lg w-auto" id="password" name="password" placeholder="Password" type="password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg lead" style="font-family: sans-serif; font-size: 25px; height: 75px; width: 150px; background-color: #1d1717; color: #ddcfcf">Login</button></button>
+        </form>
+    </div>
+{% endblock %}
